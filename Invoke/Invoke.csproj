@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CLRDll\CLRDll.vcxproj" />
+    <ProjectReference Include="..\CShapeDll\CShapeDll.csproj" />
   </ItemGroup>
 
 </Project>

@@ -49,13 +49,17 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(ProjectDir)bin\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)obj\$(Configuration)\</IntDir>
-    <LibraryPath>..\CDll\bin\$(Configuration);$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\CDll\bin\$(Configuration);..\CShapeDll\bin\x86\$(Configuration)\net5.0;$(IncludePath);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ReferencePath>..\CShapeDll\bin\x86\$(Configuration)\net5.0;$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(ProjectDir)bin\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)obj\$(Configuration)\</IntDir>
-    <LibraryPath>..\CDll\bin\$(Configuration);$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\CDll\bin\$(Configuration);..\CShapeDll\bin\x86\$(Configuration)\net5.0;$(IncludePath);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ReferencePath>..\CShapeDll\bin\x86\$(Configuration)\net5.0;$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
