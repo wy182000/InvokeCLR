@@ -1,0 +1,11 @@
+.vs/
+.vscode/
+obj/
+bin/
+*.userprefs
+/*.csproj
+/*.sln
+*.suo
+*.pidb
+*.user
+*booproj
