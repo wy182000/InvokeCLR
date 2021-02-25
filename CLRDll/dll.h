@@ -6,6 +6,13 @@
 
 using namespace System;
 
+// test for naive class hold ref class
+class cshapedll_native
+{
+public:
+    gcroot<CShapeDll::Dll^> dll = gcnew CShapeDll::Dll();
+};
+
 public ref class dll
 {
 public:
@@ -15,8 +22,10 @@ public:
     void invoke2(String^% str);
     void invoke3();
     void invoke4(String^% str);
+    void invoke5(String^% str);
 
 private:
-    gcroot<CShapeDll::Dll^>* _cshapedll;
     cdll* _cdll;
+    CShapeDll::Dll^ _cshapedll;
+    cshapedll_native* _cshapedll_native;
 };
