@@ -15,7 +15,7 @@ namespace Invoke
 			test.invoke2(ref str);
 			test.invoke3();
 			str = "invoke4";
-			test.invoke4(str);
+			test.invoke4(ref str);
 		}
 	}
 }

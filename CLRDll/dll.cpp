@@ -5,8 +5,8 @@ using namespace System::Runtime::InteropServices;
 
 dll::dll()
 {
-	_cshapedll = new gcroot<CShapeDll::Dll^>(gcnew CShapeDll::Dll());
 	_cdll = new cdll();
+	_cshapedll = new gcroot<CShapeDll::Dll^>(gcnew CShapeDll::Dll());
 }
 
 dll::~dll()
@@ -15,6 +15,12 @@ dll::~dll()
 	{
 		delete _cdll;
 		_cdll = NULL;
+	}
+
+	if (_cshapedll != NULL)
+	{
+		delete _cshapedll;
+		_cshapedll = NULL;
 	}
 }
 
@@ -49,7 +55,7 @@ void dll::invoke3()
 	}
 }
 
-void dll::invoke4(String^ str)
+void dll::invoke4(String^% str)
 {
 	if (_cshapedll != NULL)
 	{
